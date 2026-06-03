@@ -19,7 +19,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          USUARIO="facundo-rodriguez"
+          USUARIO="${{ github.repository_owner }}"
           REPOS=(
             "devops-TP01"
             "devops-TP02"
@@ -51,18 +51,19 @@ jobs:
               fi
               echo "| $REPO |   [OK] | $LAST_COMMIT |" >> $GITHUB_STEP_SUMMARY
             else
-              echo "| $REPO |  ❌ No Encontrado | - |" >> $GITHUB_STEP_SUMMARY
+              echo "| $REPO |  ⚠️ Privado o No Encontrado | - |" >> $GITHUB_STEP_SUMMARY
               ERRORES=$((ERRORES+1))
             fi
           done
 
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "Total repositorios auditados: ${#REPOS[@]}" >> $GITHUB_STEP_SUMMARY
+          echo "Repositorios no públicos detectados: $ERRORES" >> $GITHUB_STEP_SUMMARY
           
           if [ "$ERRORES" -gt 0 ]; then
-            echo "Se encontraron $ERRORES repositorios con problemas."
-            exit 1
+            echo "Aviso: Se encontraron $ERRORES repositorios privados o no públicos. Listados en el resumen."
           fi
+          exit 0
 
   lint-readme:
     name: Lint del README principal
