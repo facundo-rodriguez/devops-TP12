@@ -4,7 +4,7 @@
 
 Path Operaciones 1 - Ingeniería en DevOps
 
-[![TP12 Portfolio Check](https://github.com/facundo-rodriguez/devops-portfolio/actions/workflows/portfolio-check.yml/badge.svg)](https://github.com/facundo-rodriguez/devops-portfolio/actions)
+[![TP12 Portfolio Check](https://github.com/facundo-rodriguez/devops-TP12/actions/workflows/portfolio-check.yml/badge.svg)](https://github.com/facundo-rodriguez/devops-TP12/actions)
 [![Licencia MIT](https://img.shields.io/badge/licencia-MIT-green.svg)](LICENSE)
 [![Hecho en WSL2](https://img.shields.io/badge/entorno-WSL2%20%2B%20Ubuntu-orange.svg)](https://ubuntu.com)
 
@@ -40,10 +40,10 @@ Cada trabajo práctico cuenta con su repositorio independiente, documentación r
 ### 🛠️ Mes 1: Fundamentos de Sistemas, Redes y Git
 | TP | Proyecto | Tecnologías | Enlace |
 | :---: | :--- | :--- | :--- |
-| **01** | Script de automatización de respaldos | Bash, Linux scripting, Cron | [→ Ver Repositorio](https://github.com/facundo-rodriguez/devops-TP01) |
-| **02** | Gestión de usuarios, grupos y permisos | Linux, chmod, useradd | [→ Ver Repositorio](https://github.com/facundo-rodriguez/devops-TP02) |
-| **03** | Ciclo de vida completo con Gitflow | Git, GitHub, branching | [→ Ver Repositorio](https://github.com/facundo-rodriguez/devops-TP03) |
-| **04** | Serialización YAML y diagnóstico de red | YAML, bash, ping, dig, curl | [→ Ver Repositorio](https://github.com/facundo-rodriguez/devops-TP04) |
+| **01** | Script de automatización de respaldos | Bash, Linux scripting, Cron | [→ Ver Repositorio](https://github.com/facundo-rodriguez/tp1-operaciones1) |
+| **02** | Gestión de usuarios, grupos y permisos | Linux, chmod, useradd | [→ Ver Repositorio](https://github.com/facundo-rodriguez/tp2-operaciones1) |
+| **03** | Ciclo de vida completo con Gitflow | Git, GitHub, branching | [→ Ver Repositorio](https://github.com/facundo-rodriguez/devops-gitflow) |
+| **04** | Serialización YAML y diagnóstico de red | YAML, bash, ping, dig, curl | [→ Ver Repositorio](https://github.com/facundo-rodriguez/tp4-operaciones1) |
 
 ### 🐳 Mes 2: Contenedores, Integración Continua y Monitoreo
 | TP | Proyecto | Tecnologías | Enlace |
@@ -59,7 +59,7 @@ Cada trabajo práctico cuenta con su repositorio independiente, documentación r
 | **09** | Despliegue de Microservicios en Kubernetes | kubectl, Deployments, Services, Probes | [→ Ver Repositorio](https://github.com/facundo-rodriguez/devops-TP09) |
 | **10** | Orquestación Elástica con Helm Chart | Helm, Ingress NGINX, Rewrite Rules | [→ Ver Repositorio](https://github.com/facundo-rodriguez/devops-TP10) |
 | **11** | Infraestructura como Código con Terraform | Terraform, HCL, Modules, Docker Provider | [→ Ver Repositorio](https://github.com/facundo-rodriguez/devops-TP11) |
-| **12** | Pipeline de Validación del Portfolio Final | GitHub Actions, Repo Audit, Linter | [→ Este Repositorio](https://github.com/facundo-rodriguez/devops-portfolio) |
+| **12** | Pipeline de Validación del Portfolio Final | GitHub Actions, Repo Audit, Linter | [→ Este Repositorio](https://github.com/facundo-rodriguez/devops-TP12) |
 
 ---
 

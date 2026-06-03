@@ -21,10 +21,10 @@ jobs:
         run: |
           USUARIO="${{ github.repository_owner }}"
           REPOS=(
-            "devops-TP01"
-            "devops-TP02"
-            "devops-TP03"
-            "devops-TP04"
+            "tp1-operaciones1"
+            "tp2-operaciones1"
+            "devops-gitflow"
+            "tp4-operaciones1"
             "devops-TP05"
             "devops-TP06"
             "devops-TP08"
@@ -51,17 +51,18 @@ jobs:
               fi
               echo "| $REPO |   [OK] | $LAST_COMMIT |" >> $GITHUB_STEP_SUMMARY
             else
-              echo "| $REPO |  ⚠️ Privado o No Encontrado | - |" >> $GITHUB_STEP_SUMMARY
+              echo "| $REPO |  ❌ No Encontrado | - |" >> $GITHUB_STEP_SUMMARY
               ERRORES=$((ERRORES+1))
             fi
           done
 
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "Total repositorios auditados: ${#REPOS[@]}" >> $GITHUB_STEP_SUMMARY
-          echo "Repositorios no públicos detectados: $ERRORES" >> $GITHUB_STEP_SUMMARY
+          echo "Repositorios no encontrados: $ERRORES" >> $GITHUB_STEP_SUMMARY
           
           if [ "$ERRORES" -gt 0 ]; then
-            echo "Aviso: Se encontraron $ERRORES repositorios privados o no públicos. Listados en el resumen."
+            echo "Error: Se encontraron $ERRORES repositorios con problemas."
+            exit 1
           fi
           exit 0
 
